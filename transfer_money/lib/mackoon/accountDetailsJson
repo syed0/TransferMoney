@@ -1,0 +1,56 @@
+{
+
+  "accounts": [
+
+    {
+
+   "name":"JAndK",
+
+   "balance": 23423.5,
+
+   "type": "Savings",
+
+"id":"esb213"
+
+
+
+
+
+},
+
+    {
+
+  "name":"Sbi",
+
+   "balance": 2723.5,
+
+   "type": "Current",
+
+"id":"ra513"
+
+
+
+
+
+  },
+  {
+
+  "name":"HDFC",
+
+   "balance": 723.5,
+
+   "type": "Savings",
+
+"id":"u7513"
+
+
+
+
+
+  }
+
+
+
+  ]
+
+}
