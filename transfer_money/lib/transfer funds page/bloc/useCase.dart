@@ -1,8 +1,8 @@
 import 'package:clean_framework/clean_framework.dart';
 import 'package:clean_framework/clean_framework_defaults.dart';
 import 'package:transfer_money/core/example_locator.dart';
-import 'package:transfer_money/transfer%20funds%20page/bloc/account_details_serviceAdapter.dart';
-import 'package:transfer_money/transfer%20funds%20page/bloc/submit_serviceAdapter.dart';
+import 'package:transfer_money/transfer%20funds%20page/bloc/account_details_service_adapter.dart';
+import 'package:transfer_money/transfer%20funds%20page/bloc/submit_service_adapter.dart';
 import 'package:transfer_money/transfer%20funds%20page/bloc/transfer_page_bloc.dart';
 import 'package:transfer_money/transfer%20funds%20page/model/transfer_page_entity.dart';
 import 'package:transfer_money/transfer%20funds%20page/model/transfer_page_viewModal.dart';

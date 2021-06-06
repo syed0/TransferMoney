@@ -5,5 +5,5 @@ class ExampleLocator {
 
   Repository repository = Repository();
 
-  SimpleRestApi api = SimpleRestApi(baseUrl: 'http://192.168.29.246:3000/');
+  SimpleRestApi api = SimpleRestApi(baseUrl: 'https://192.168.29.25:3000/');
 }

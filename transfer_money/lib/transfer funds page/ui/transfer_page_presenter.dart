@@ -41,6 +41,12 @@ class TransferPagePresenter extends Presenter<TransferPageBloc,
       onSubmitTap: () => bloc.submitTapEvent.launch(),
     );
   }
+  @override
+  Widget buildLoadingScreen(BuildContext context) {
+    return Center(
+      child: CircularProgressIndicator(),
+    );
+  }
 
   @override
   Stream<TransferPageFromAndToViewModal> getViewModelStream(

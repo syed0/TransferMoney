@@ -1,7 +1,7 @@
 import 'package:clean_framework/clean_framework.dart';
 import 'package:clean_framework/clean_framework_defaults.dart';
 import 'package:transfer_money/core/example_locator.dart';
-import 'package:transfer_money/transfer%20funds%20page/api/submit_responseModel.dart';
+import 'package:transfer_money/transfer%20funds%20page/api/submit_response_model.dart';
 
 class SubmitService
     extends EitherService<JsonRequestModel, SubmitResponseModel> {

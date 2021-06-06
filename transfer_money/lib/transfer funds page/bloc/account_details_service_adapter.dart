@@ -1,6 +1,6 @@
 import 'package:clean_framework/clean_framework.dart';
 import 'package:clean_framework/src/defaults/json_service.dart';
-import 'package:transfer_money/transfer%20funds%20page/api/account_details_responseModel.dart';
+import 'package:transfer_money/transfer%20funds%20page/api/account_details_response_model.dart';
 import 'package:transfer_money/transfer%20funds%20page/api/account_details_service.dart';
 import 'package:transfer_money/transfer%20funds%20page/model/transfer_page_entity.dart';
 
