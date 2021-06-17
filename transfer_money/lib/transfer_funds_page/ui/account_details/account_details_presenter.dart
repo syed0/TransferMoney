@@ -1,16 +1,15 @@
 import 'package:clean_framework/clean_framework.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:transfer_money/transfer%20funds%20page/bloc/transfer_page_bloc.dart';
-import 'package:transfer_money/transfer%20funds%20page/model/transfer_page_viewModal.dart';
-
+import 'package:transfer_money/transfer_funds_page/bloc/transfer_bloc.dart';
+import 'package:transfer_money/transfer_funds_page/view_model/account_list_view_model.dart';
 import 'account_details_screen.dart';
 
 class AccountDetailsPresenter extends Presenter<TransferPageBloc,
-    TransferPageViewModalList, AccountDetailsScreen> {
+    AccountListViewModel, AccountDetailsScreen> {
   @override
   AccountDetailsScreen buildScreen(BuildContext context, TransferPageBloc bloc,
-      TransferPageViewModalList viewModel) {
+      AccountListViewModel viewModel) {
     return AccountDetailsScreen(
       context: context,
       viewModal: viewModel,
@@ -29,7 +28,7 @@ class AccountDetailsPresenter extends Presenter<TransferPageBloc,
   }
 
   @override
-  Stream<TransferPageViewModalList> getViewModelStream(TransferPageBloc bloc) {
+  Stream<AccountListViewModel> getViewModelStream(TransferPageBloc bloc) {
     return bloc.accountDetails.receive;
   }
 

@@ -2,25 +2,24 @@ import 'package:clean_framework/clean_framework.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:transfer_money/transfer%20funds%20page/bloc/transfer_page_bloc.dart';
-import 'package:transfer_money/transfer%20funds%20page/model/transfer_page_viewModal.dart';
-import 'package:transfer_money/transfer%20funds%20page/ui/submit_success/submit_success_page.dart';
-import 'package:transfer_money/transfer%20funds%20page/ui/transfer_page_screen.dart';
-
-import 'account details/account_details_widget.dart';
+import 'package:transfer_money/transfer_funds_page/bloc/transfer_bloc.dart';
+import 'package:transfer_money/transfer_funds_page/ui/submit_success_page/submit_success_widget.dart';
+import 'package:transfer_money/transfer_funds_page/ui/transfer_screen.dart';
+import 'package:transfer_money/transfer_funds_page/view_model/transfer_page_view_model.dart';
+import 'account_details/account_details_widget.dart';
 
 class TransferPagePresenter extends Presenter<TransferPageBloc,
-    TransferPageFromAndToViewModal, TransferPageScreen> {
+    TransferPageViewModel, TransferPageScreen> {
   @override
   TransferPageScreen buildScreen(BuildContext context, TransferPageBloc bloc,
-      TransferPageFromAndToViewModal viewModel) {
+      TransferPageViewModel viewModel) {
     SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
       if (viewModel.dataError) {
         _showErrorDialog(context);
       }
       if (viewModel.didSucceed) {
         Navigator.push(context,
-            new MaterialPageRoute(builder: (context) => SubmitSuccessPage()));
+            new MaterialPageRoute(builder: (context) => SubmitSuccessPageWidget()));
       }
     });
 
@@ -41,6 +40,7 @@ class TransferPagePresenter extends Presenter<TransferPageBloc,
       onSubmitTap: () => bloc.submitTapEvent.launch(),
     );
   }
+
   @override
   Widget buildLoadingScreen(BuildContext context) {
     return Center(
@@ -49,7 +49,7 @@ class TransferPagePresenter extends Presenter<TransferPageBloc,
   }
 
   @override
-  Stream<TransferPageFromAndToViewModal> getViewModelStream(
+  Stream<TransferPageViewModel> getViewModelStream(
       TransferPageBloc bloc) {
     return bloc.selectedAccountDetails.receive;
   }

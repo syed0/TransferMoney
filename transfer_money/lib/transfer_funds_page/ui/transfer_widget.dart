@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:transfer_money/transfer%20funds%20page/ui/transfer_page_presenter.dart';
+import 'package:transfer_money/transfer_funds_page/ui/transfer_presenter.dart';
 
 class TransferPageWidget extends StatelessWidget {
   @override
